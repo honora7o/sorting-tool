@@ -1,0 +1,3 @@
+Total words: 7
+Sorted data: 
+1-233344211
