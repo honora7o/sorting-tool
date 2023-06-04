@@ -123,7 +123,8 @@ public class UserInterface {
                 System.out.println("Total words: " + wordCount);
 
                 System.out.println("Sorted data: ");
-                sortedWords.forEach(System.out::print);
+                sortedWords.stream()
+                        .forEach(word -> System.out.print(word + " "));
             }
 
             if (sortingType == SortingType.BY_COUNT) {
@@ -145,8 +146,9 @@ public class UserInterface {
                 if (sortingType == SortingType.NATURAL) {
                     printWriter.println("Total words: " + wordCount);
 
-                    printWriter.println("Sorted data: ");
-                    sortedWords.forEach(printWriter::print);
+                    printWriter.print("Sorted data: ");
+                    sortedWords.stream()
+                            .forEach(word -> printWriter.print(word + " "));
                 }
 
                 if (sortingType == SortingType.BY_COUNT) {
